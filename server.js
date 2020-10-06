@@ -16,7 +16,7 @@ App.listen(apiPort, () => {
 
 // -- console message
 console.log("-------------------------------------------");
-console.log(" REPARACIONES_CLIENTES RUNNING ", moment(new Date()).format('DD/MM/YYYYY HH:mm:ss'));
+console.log(" PROAS_ARQUITECTURA RUNNING ", moment(new Date()).format('DD/MM/YYYYY HH:mm:ss'));
 console.log("-------------------------------------------");
 console.log(' VERSION: ' + Pack.version);
 console.log(' PORT: ' + process.env.BASE_PORT);
