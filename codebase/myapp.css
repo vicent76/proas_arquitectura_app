@@ -65,4 +65,28 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+.multiline-cell {
+  word-wrap: break-word;
+  /* Divide el texto en palabras */
+  overflow-wrap: break-word;
+  /* Asegura el ajuste automático */
+}
+/* Personalización de los botones */
+.custom-counter .webix_inp_counter_prev::before {
+  content: "\2B07";
+  /* Flecha hacia abajo */
+  font-size: 16px;
+  display: block;
+}
+.custom-counter .webix_inp_counter_next::before {
+  content: "\2B06";
+  /* Flecha hacia arriba */
+  font-size: 16px;
+  display: block;
+}
+/* Ocultar el texto original (- y +) */
+.custom-counter .webix_inp_counter_prev div,
+.custom-counter .webix_inp_counter_next div {
+  display: none !important;
+}
 
