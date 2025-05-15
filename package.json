@@ -1,6 +1,6 @@
 {
   "name": "proas_arquitectura_app",
-  "version": "1.0.0",
+  "version": "2.3.223",
   "description": "API para la ejecucion de la plicación webix proas_ arquitectura",
   "main": "server.js",
   "scripts": {
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://vicent76@bitbucket.org/ariadnasw/proas_arquitectura_app.git"
+    "url": "https://github.com/vicent76/proas_arquitectura_app.git"
   },
   "author": "Vicent Ribera",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ariadnasw/proas_arquitectura_app#readme",
+  "homepage": "https://github.com/vicent76/proas_arquitectura_app.git",
   "dependencies": {
     "app-root-path": "^3.0.0",
     "bluebird": "^3.7.2",
