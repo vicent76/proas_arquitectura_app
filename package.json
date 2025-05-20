@@ -1,6 +1,6 @@
 {
   "name": "proas_arquitectura_app",
-  "version": "2.3.223",
+  "version": "2.3.224",
   "description": "API para la ejecucion de la plicación webix proas_ arquitectura",
   "main": "server.js",
   "scripts": {
