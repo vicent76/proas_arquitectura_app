@@ -1,6 +1,6 @@
 {
   "name": "proas_arquitectura_app",
-  "version": "2.3.224",
+  "version": "2.3.227",
   "description": "API para la ejecucion de la plicación webix proas_ arquitectura",
   "main": "server.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/vicent76/proas_arquitectura_app.git"
   },
-  "author": "Vicent Ribera",
+  "author": "Vicent Ribera Condomina",
   "license": "ISC",
   "homepage": "https://github.com/vicent76/proas_arquitectura_app.git",
   "dependencies": {
