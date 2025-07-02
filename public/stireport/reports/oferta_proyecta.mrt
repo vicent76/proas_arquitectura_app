@@ -1,10 +1,10 @@
 {
   "ReportVersion": "2021.3.6.0",
-  "ReportGuid": "29424c9c9dc54a06b0359693f8c8ebef",
+  "ReportGuid": "ff9d49ef30104f3a9573dbaf65fad6d4",
   "ReportName": "OfertaGeneral",
   "ReportAlias": "OfertaGeneral",
   "ReportCreated": "/Date(1492633073000+0200)/",
-  "ReportChanged": "/Date(1750071727225+0200)/",
+  "ReportChanged": "/Date(1751358190531+0200)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class OfertaGeneral : Stimulsoft.Report.StiReport\r\n    {\r\n        public OfertaGeneral()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
@@ -951,6 +951,7 @@
         "5": {
           "Ident": "StiDataBand",
           "Name": "Dataofertas_lineas",
+          "CanShrink": true,
           "ClientRectangle": "0,8.8,19,0.6",
           "Interaction": {
             "Ident": "StiBandInteraction"
@@ -968,7 +969,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{Trim(Remove(ofertas_lineas.descripcion, 0, ofertas_lineas.descripcion.IndexOf(\":\") + 1))}\r\n\r\n"
+                "Value": "{ofertas_lineas.descripcion}\r\n"
               },
               "HorAlignment": "Width",
               "Font": "Calibri Light;11;;",
@@ -989,7 +990,7 @@
         "6": {
           "Ident": "StiGroupFooterBand",
           "Name": "GroupFooterLineas",
-          "ClientRectangle": "0,10.2,19,0.6",
+          "ClientRectangle": "0,10.2,19,0.8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -999,7 +1000,7 @@
             "0": {
               "Ident": "StiText",
               "Name": "Text31",
-              "ClientRectangle": "1.4,0,1.8,0.4",
+              "ClientRectangle": "1.4,0.2,1.8,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -1015,7 +1016,7 @@
             "1": {
               "Ident": "StiText",
               "Name": "Text32",
-              "ClientRectangle": "16.2,0,2.6,0.4",
+              "ClientRectangle": "16.2,0.2,2.6,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -1041,7 +1042,7 @@
             "2": {
               "Ident": "StiText",
               "Name": "Text2",
-              "ClientRectangle": "3.2,0.2,13.2,0.2",
+              "ClientRectangle": "3.2,0.4,13.2,0.2",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -1057,7 +1058,7 @@
         "7": {
           "Ident": "StiHeaderBand",
           "Name": "separador",
-          "ClientRectangle": "0,11.6,19,0",
+          "ClientRectangle": "0,11.8,19,0",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1069,7 +1070,7 @@
         "8": {
           "Ident": "StiHeaderBand",
           "Name": "cabeceraResumenLineas",
-          "ClientRectangle": "0,12.4,19,0.6",
+          "ClientRectangle": "0,12.6,19,0.6",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1099,7 +1100,7 @@
         "9": {
           "Ident": "StiGroupHeaderBand",
           "Name": "GroupHeaderBandResumen",
-          "ClientRectangle": "0,13.8,19,0.4",
+          "ClientRectangle": "0,14,19,0.4",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
@@ -1164,7 +1165,7 @@
         "10": {
           "Ident": "StiDataBand",
           "Name": "DataOfertas_lineas_resumen",
-          "ClientRectangle": "0,15,19,0",
+          "ClientRectangle": "0,15.2,19,0",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
@@ -1178,7 +1179,7 @@
           "Ident": "StiFooterBand",
           "Name": "PieLineasResumen",
           "Guid": "a3d1121575904f918c8fb593a6d607e7",
-          "ClientRectangle": "0,15.8,19,0.8",
+          "ClientRectangle": "0,16,19,0.8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1237,7 +1238,7 @@
         "12": {
           "Ident": "StiHeaderBand",
           "Name": "HeaderBandFormaPago",
-          "ClientRectangle": "0,17.4,19,1.6",
+          "ClientRectangle": "0,17.6,19,1.6",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1310,7 +1311,7 @@
           "Ident": "StiDataBand",
           "Name": "DataFormaPago",
           "Guid": "dfc37101dd774e1b87063fb63db924f1",
-          "ClientRectangle": "0,19.8,19,0",
+          "ClientRectangle": "0,20,19,0",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
@@ -1324,7 +1325,7 @@
         "14": {
           "Ident": "StiFooterBand",
           "Name": "PieFormaPago",
-          "ClientRectangle": "0,20.6,19,6",
+          "ClientRectangle": "0,20.8,19,6",
           "Interaction": {
             "Ident": "StiInteraction"
           },
