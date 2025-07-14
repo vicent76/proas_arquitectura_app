@@ -1,10 +1,10 @@
 {
   "ReportVersion": "2021.3.6.0",
-  "ReportGuid": "24bcc2553e344f8b9bdc66a50908ad9b",
+  "ReportGuid": "664b035da16045c0ab105f10e93b4eae",
   "ReportName": "OfertaGeneral",
   "ReportAlias": "OfertaGeneral",
   "ReportCreated": "/Date(1492633073000+0200)/",
-  "ReportChanged": "/Date(1751446565841+0200)/",
+  "ReportChanged": "/Date(1752233729925+0200)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class OfertaGeneral : Stimulsoft.Report.StiReport\r\n    {\r\n        public OfertaGeneral()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
@@ -511,7 +511,7 @@
         "1": {
           "Ident": "StiPageFooterBand",
           "Name": "PageFooterBand2",
-          "ClientRectangle": "0,52,19,0.8",
+          "ClientRectangle": "0,46.72,19,0.8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1003,7 +1003,8 @@
             }
           },
           "DataSourceName": "propuesta_lineas",
-          "DataRelationName": "rel_propuestalineas_propuesta"
+          "DataRelationName": "rel_propuestalineas_propuesta",
+          "MasterComponent": "DataBand1"
         },
         "12": {
           "Ident": "StiHeaderBand",
@@ -1144,7 +1145,7 @@
         "16": {
           "Ident": "StiFooterBand",
           "Name": "PieFormaPago",
-          "ClientRectangle": "0,32.8,19,5.6",
+          "ClientRectangle": "0,32.8,19,8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1288,6 +1289,108 @@
               "TextBrush": "solid:Black",
               "LineSpacing": 1.1499999761581421,
               "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiChart",
+              "Name": "Chart1",
+              "ClientRectangle": "2,4.8,4.2,2.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:255,255,255",
+              "Series": {
+                "0": {
+                  "Ident": "StiPieSeries",
+                  "ShowShadow": false,
+                  "SeriesLabels": {
+                    "Ident": "StiCenterAxisLabels",
+                    "MarkerSize": {
+                      "Width": 8,
+                      "Height": 6
+                    },
+                    "ValueTypeSeparator": "-",
+                    "LabelColor": "50,58,69",
+                    "BorderColor": "Transparent",
+                    "Brush": "solid:119,255,255,255",
+                    "Font": ";10;;"
+                  },
+                  "ValueDataColumn": "propuesta_lineas.porcentaje",
+                  "Title": {
+                    "Value": "Series 1"
+                  },
+                  "BorderColor": "Transparent",
+                  "Brush": "solid:52,152,219",
+                  "Lighting": false
+                },
+                "1": {
+                  "Ident": "StiPieSeries",
+                  "ShowShadow": false,
+                  "SeriesLabels": {
+                    "Ident": "StiCenterAxisLabels",
+                    "MarkerSize": {
+                      "Width": 8,
+                      "Height": 6
+                    },
+                    "ValueTypeSeparator": "-",
+                    "LabelColor": "50,58,69",
+                    "BorderColor": "Transparent",
+                    "Brush": "solid:119,255,255,255",
+                    "Font": ";10;;"
+                  },
+                  "ValueDataColumn": "propuesta_lineas.cantidad",
+                  "Title": {
+                    "Value": "Series 2"
+                  },
+                  "BorderColor": "Transparent",
+                  "Brush": "solid:239,113,122",
+                  "Lighting": false
+                }
+              },
+              "Area": {
+                "Ident": "StiPieArea",
+                "BorderColor": "Transparent",
+                "Brush": "solid:255,255,255"
+              },
+              "Table": {
+                "GridLineColor": "Transparent",
+                "Header": {
+                  "Brush": "solid:White"
+                },
+                "DataCells": {
+                  "TextColor": "140,140,140"
+                }
+              },
+              "SeriesLabels": {
+                "Ident": "StiCenterPieLabels",
+                "MarkerSize": {
+                  "Width": 8,
+                  "Height": 6
+                },
+                "ValueTypeSeparator": "-",
+                "LabelColor": "50,58,69",
+                "BorderColor": "Transparent",
+                "Brush": "solid:119,255,255,255",
+                "Font": ";10;;"
+              },
+              "Legend": {
+                "ShowShadow": false,
+                "BorderColor": "Transparent",
+                "Brush": "solid:255,255,255",
+                "TitleColor": "105,105,105",
+                "LabelsColor": "140,140,140",
+                "MarkerSize": {
+                  "Width": 10,
+                  "Height": 10
+                },
+                "Size": "0,0"
+              },
+              "Title": {
+                "Brush": "solid:140,140,140"
+              },
+              "Style": {
+                "Ident": "StiStyle29"
+              }
             }
           },
           "PrintAtBottom": true,

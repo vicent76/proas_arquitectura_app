@@ -134,4 +134,16 @@
   overflow: hidden;
   cursor: default;
 }
+.text-align-right {
+  text-align: right;
+}
+.disabled-row {
+  background-color: #d3d3d3 !important;
+  /* Gris claro, cambia si quieres más oscuro */
+  color: #555 !important;
+  /* Gris oscuro para el texto */
+}
+.checkbox-cell {
+  text-align: center;
+}
 
