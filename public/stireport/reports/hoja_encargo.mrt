@@ -1,10 +1,10 @@
 {
   "ReportVersion": "2021.3.6.0",
-  "ReportGuid": "8b39dae46d9442d890279020a8155751",
+  "ReportGuid": "cb2d5c56ee6c4a69898561451c4f979b",
   "ReportName": "OfertaGeneral",
   "ReportAlias": "OfertaGeneral",
   "ReportCreated": "/Date(1492633073000+0200)/",
-  "ReportChanged": "/Date(1754382449695+0200)/",
+  "ReportChanged": "/Date(1754391923558+0200)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class OfertaGeneral : Stimulsoft.Report.StiReport\r\n    {\r\n        public OfertaGeneral()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
@@ -56,28 +56,32 @@
             "Index": -1,
             "NameInSource": "propuestaId",
             "Alias": "propuestaId",
-            "Type": "System.Int32"
+            "Type": "System.Int32",
+            "Key": "2acc44c78b1f48dea9b1f5cd772e51bc"
           },
           "1": {
             "Name": "referencia",
             "Index": -1,
             "NameInSource": "referencia",
             "Alias": "referencia",
-            "Type": "System.String"
+            "Type": "System.String",
+            "Key": "98324522c3174540b4a3050b5dbafb7b"
           },
           "2": {
             "Name": "fechaOferta",
             "Index": -1,
             "NameInSource": "fechaOferta",
             "Alias": "fechaOferta",
-            "Type": "System.DateTime"
+            "Type": "System.DateTime",
+            "Key": "efeb8f9e00e547fd8bd7d71a748b8172"
           },
           "3": {
             "Name": "fechaOfertaFormat",
             "Index": -1,
             "NameInSource": "fechaOfertaFormat",
             "Alias": "fechaOfertaFormat",
-            "Type": "System.Byte[]"
+            "Type": "System.String",
+            "Key": "b806eb680bec44ae8a5d5289e71b58fd"
           },
           "4": {
             "Name": "empresaNombre",
@@ -201,7 +205,7 @@
         },
         "NameInSource": "PROAS_REPORT_PROPUESTA",
         "CommandTimeout": 21,
-        "SqlCommand": "SELECT   \r\np.propuestaId,\r\ns.referencia,\r\ns.fechaOferta,\r\nDATE_FORMAT(s.fechaOferta, \"dd/mm/YYYY\") AS fechaOfertaFormat,\r\nem.nombre AS empresaNombre,\r\npro.nombre AS proveedorNombre,\r\nv.ofertaId,\r\nc.expedienteId,\r\nCOALESCE(tv.nombre, '') AS tipoViaNombre,\r\nCOALESCE(e.direccion, '') AS direccion,\r\nCOALESCE(e.poblacion, '') AS poblacion,\r\nCOALESCE(e.provincia, '') AS provincia,\r\nCOALESCE(e.codPostal, '') AS codPostal,\r\nCOALESCE(cli.nombre, '') AS clienteNombre,\r\nCOALESCE(cli.nif, '') AS clienteNif,\r\nCOALESCE(e.contacto, '') AS contacto,\r\nCOALESCE(cli.telefono1, '') AS telefono1,\r\nCOALESCE(cli.telefono2, '') AS telefono2,\r\np.plazoEjecucion,\r\nv.tituloTexto,\r\ne.honorarioVariableId\r\nFROM  propuestas AS p\r\nLEFT JOIN subcontrata_propuestas AS sp ON sp.propuestaId = p.propuestaId \r\nLEFT JOIN ofertas AS s ON s.ofertaId = sp.subcontrataId AND s.esCoste = 2\r\nLEFT JOIN ofertas AS c ON c.ofertaId = s.ofertaCosteId AND c.esCoste = 1\r\nLEFT JOIN ofertas AS v ON v.ofertaCosteId = c.ofertaId AND v.esCoste = 0\r\nLEFT JOIN expedientes AS e ON e.expedienteId = s.expedienteId\r\nLEFT JOIN empresas AS em ON em.empresaId = s.empresaId\r\nLEFT JOIN proveedores  AS pro ON pro.proveedorId = p.proveedorId\r\nLEFT JOIN tipos_via AS tv ON tv.tipoViaId = e.tipoViaId\r\nLEFT JOIN clientes AS cli ON cli.clienteId = e.clienteId\r\n"
+        "SqlCommand": "SELECT   \r\np.propuestaId,\r\ns.referencia,\r\ns.fechaOferta,\r\nDATE_FORMAT(s.fechaOferta, '%d/%m/%Y') AS fechaOfertaFormat,\r\nem.nombre AS empresaNombre,\r\npro.nombre AS proveedorNombre,\r\nv.ofertaId,\r\nc.expedienteId,\r\nCOALESCE(tv.nombre, '') AS tipoViaNombre,\r\nCOALESCE(e.direccion, '') AS direccion,\r\nCOALESCE(e.poblacion, '') AS poblacion,\r\nCOALESCE(e.provincia, '') AS provincia,\r\nCOALESCE(e.codPostal, '') AS codPostal,\r\nCOALESCE(cli.nombre, '') AS clienteNombre,\r\nCOALESCE(cli.nif, '') AS clienteNif,\r\nCOALESCE(e.contacto, '') AS contacto,\r\nCOALESCE(cli.telefono1, '') AS telefono1,\r\nCOALESCE(cli.telefono2, '') AS telefono2,\r\np.plazoEjecucion,\r\nv.tituloTexto,\r\ne.honorarioVariableId\r\nFROM  propuestas AS p\r\nLEFT JOIN subcontrata_propuestas AS sp ON sp.propuestaId = p.propuestaId \r\nLEFT JOIN ofertas AS s ON s.ofertaId = sp.subcontrataId AND s.esCoste = 2\r\nLEFT JOIN ofertas AS c ON c.ofertaId = s.ofertaCosteId AND c.esCoste = 1\r\nLEFT JOIN ofertas AS v ON v.ofertaCosteId = c.ofertaId AND v.esCoste = 0\r\nLEFT JOIN expedientes AS e ON e.expedienteId = s.expedienteId\r\nLEFT JOIN empresas AS em ON em.empresaId = s.empresaId\r\nLEFT JOIN proveedores  AS pro ON pro.proveedorId = p.proveedorId\r\nLEFT JOIN tipos_via AS tv ON tv.tipoViaId = e.tipoViaId\r\nLEFT JOIN clientes AS cli ON cli.clienteId = e.clienteId\r\n"
       },
       "1": {
         "Ident": "StiMySqlSource",
@@ -441,14 +445,13 @@
               "Ident": "StiText",
               "Name": "Text20",
               "Guid": "ffe098fd8dd44fac8c1ee997469e3de0",
-              "ClientRectangle": "12.2,1.2,2,0.4",
+              "ClientRectangle": "12.6,1.2,1.8,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
                 "Value": "En Madrid a "
               },
-              "HorAlignment": "Right",
               "Font": "Tahoma;9;;",
               "Border": ";;;;;;;solid:Black",
               "Brush": "solid:",
@@ -500,7 +503,7 @@
               "Ident": "StiText",
               "Name": "Text35",
               "Guid": "faced06f14914aa4a17ea086f51631fd",
-              "ClientRectangle": "8.2,1.2,4,0.4",
+              "ClientRectangle": "8.2,1.2,4.4,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -1138,7 +1141,7 @@
         "15": {
           "Ident": "StiDataBand",
           "Name": "DataBand2",
-          "ClientRectangle": "0,28.6,19,2",
+          "ClientRectangle": "0,28.6,19,1.8",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
@@ -1156,7 +1159,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "El TÉCNICO se compromete a ejecutar los trabajos de acuerdo a las fechas y plazos indicadas a continuación.\r\nINICIO:\t{propuesta.fechaOfertaFormat}\r\nFINALIZACIÓN: Entrega del trabajo en los {propuesta.plazoEjecucion} dias naturales siguientes a la fecha del Encargo"
+                "Value": "El TÉCNICO se compromete a ejecutar los trabajos de acuerdo a las fechas y plazos indicadas a continuación.\r\nINICIO: {propuesta.fechaOfertaFormat}\r\nFINALIZACIÓN: Entrega del trabajo en los {propuesta.plazoEjecucion} dias naturales siguientes a la fecha del Encargo"
               },
               "VertAlignment": "Center",
               "Font": "Tahoma;9;;",
@@ -1175,7 +1178,7 @@
         "16": {
           "Ident": "StiHeaderBand",
           "Name": "HeaderBand3",
-          "ClientRectangle": "0,31.4,19,1",
+          "ClientRectangle": "0,31.2,19,1",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -1206,7 +1209,7 @@
         "17": {
           "Ident": "StiDataBand",
           "Name": "DataBand3",
-          "ClientRectangle": "0,33.2,19,2",
+          "ClientRectangle": "0,33,19,2",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
@@ -1243,7 +1246,7 @@
         "18": {
           "Ident": "StiFooterBand",
           "Name": "PieFormaPago",
-          "ClientRectangle": "0,36,19,8",
+          "ClientRectangle": "0,35.8,19,8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
