@@ -146,4 +146,14 @@
 .checkbox-cell {
   text-align: center;
 }
+.highlight-icon {
+  color: #2f00ff;
+  /* Color resaltado */
+  font-size: 16px;
+  cursor: pointer;
+}
+.icon-container {
+  padding-left: 5px;
+  background: transparent !important;
+}
 
