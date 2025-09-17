@@ -1,10 +1,10 @@
 {
   "ReportVersion": "2021.3.6.0",
-  "ReportGuid": "0a848134f15847b0885d1863ce221e5b",
+  "ReportGuid": "2cbddc86ea16413b9e7e3b9748dab0eb",
   "ReportName": "OfertaGeneral",
   "ReportAlias": "OfertaGeneral",
   "ReportCreated": "/Date(1492633073000+0200)/",
-  "ReportChanged": "/Date(1758091777186+0200)/",
+  "ReportChanged": "/Date(1758094762021+0200)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class OfertaGeneral : Stimulsoft.Report.StiReport\r\n    {\r\n        public OfertaGeneral()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
@@ -64,21 +64,24 @@
             "Index": -1,
             "NameInSource": "ofertaId",
             "Alias": "ofertaId",
-            "Type": "System.Int32"
+            "Type": "System.Int32",
+            "Key": "e3d8056eca004ee0a825f2751db94dff"
           },
           "2": {
             "Name": "referencia",
             "Index": -1,
             "NameInSource": "referencia",
             "Alias": "referencia",
-            "Type": "System.String"
+            "Type": "System.String",
+            "Key": "6695709e532642a2a9b99e6152359c14"
           },
           "3": {
             "Name": "fechaOferta",
             "Index": -1,
             "NameInSource": "fechaOferta",
             "Alias": "fechaOferta",
-            "Type": "System.Byte[]"
+            "Type": "System.String",
+            "Key": "c2020c8abbf94ff2b9006276e198b2c6"
           },
           "4": {
             "Name": "nombreEmpresa",
@@ -535,7 +538,7 @@
         "1": {
           "Ident": "StiPageFooterBand",
           "Name": "PageFooterBand2",
-          "ClientRectangle": "0,34.76,19,2.2",
+          "ClientRectangle": "0,24.2,19,2.2",
           "Interaction": {
             "Ident": "StiInteraction"
           },
