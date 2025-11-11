@@ -1,8 +1,9 @@
 {
   "name": "proas_arquitectura_app",
-  "version": "2.3.246",
+  "version": "2.3.249",
   "description": "API para la ejecucion de la plicación webix proas_ arquitectura",
   "main": "server.js",
+  "author": "Vicent Ribera Condomina",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
